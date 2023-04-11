@@ -13,8 +13,8 @@ const PORT: string = process.env.PORT || "3000";
 const app: Application = express();
 
 app.use(cors({ origin: ["http://localhost:3000"] }));
-app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(logger);
 
